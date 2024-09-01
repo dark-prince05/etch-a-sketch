@@ -13,3 +13,16 @@ body {
   width: 500px;
   background-color: white;
 }
+
+.btn {
+  font-size: 20px;
+  margin: 20px 90px;
+  padding: 5px 20px;
+  background-color: #00bfff80;
+  border: 2px solid;
+  border-radius: 7px;
+}
+
+.btn:hover {
+  background-color: #00ff00;
+}
