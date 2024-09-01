@@ -11,8 +11,13 @@ let createDivs = (num) => {
         "style",
         `flex:1 1 auto;width:${boxSize}px; height:auto; `,
       );
-      div.addEventListener("mousemove", (event) => {
-        div.style.backgroundColor = "blue";
+      let opacity = 0.5;
+      div.addEventListener("mousemove", () => {
+        div.style.opacity = opacity;
+        div.style.backgroundColor = color;
+      });
+      div.addEventListener("mouseout", () => {
+        opacity += 0.3;
       });
       container.appendChild(div);
     }
@@ -20,8 +25,17 @@ let createDivs = (num) => {
   container.setAttribute("style", "display:flex; flex-wrap:wrap;");
 };
 
+function getRandomColor() {
+  let r = Math.floor(Math.random() * 256);
+  let g = Math.floor(Math.random() * 256);
+  let b = Math.floor(Math.random() * 256);
+  return `rgb(${r}, ${g}, ${b})`;
+}
+let color = `rgb(0, 17, 255)`;
+
 let removeDivs = () => {
   let boxes = Array.from(container.children);
+  color = getRandomColor();
   boxes.forEach((element) => {
     container.removeChild(element);
   });
