@@ -1,0 +1,15 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #ff5e0030;
+}
+
+#container {
+  border: 5px solid;
+  margin: auto auto;
+  height: 500px;
+  width: 500px;
+  background-color: white;
+}
